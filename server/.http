@@ -1,0 +1,53 @@
+@BASEURL=http://localhost:3000/api
+
+
+//GET {{BASEURL}}/ticket
+
+GET {{BASEURL}}/prescription
+
+//처방전 등록
+POST {{BASEURL}}/prescription
+Content-Type: application/json
+
+{
+    "patientName" : "안현서",
+    "medicine" : "감기약 동그란거 네 알"
+}
+
+//특정 id의 처방전 삭제
+DELETE {{BASEURL}}/prescription/5f3f767d2f440215286a0d44
+
+DELETE {{BASEURL}}/prescription/patientName/안현서
+
+
+
+// 병원 등록
+POST {{BASEURL}}/hospital
+Content-Type: application/json
+
+{
+    "name":"ABC 병원",
+    "mobile": "010-1234-1234",
+    "address" : "서울시 종로구",
+    "zipcode" : "12345"
+}
+
+
+DELETE {{BASEURL}}/hospital/5f3f77f97d60b315984db77b
+
+
+PUT {{BASEURL}}/hospital/5f3141a9e0a5f044ad8c64eb
+Content-Type: application/json
+
+{
+    "name":"ABC 병원 1",
+    "mobile": "010-1234-1234 2",
+    "address" : "서울시 종로구 1",
+    "zipcode" : "12345 1"
+}
+
+GET {{BASEURL}}/hospital/5f3141a9e0a5f044ad8c64eb
+
+GET {{BASEURL}}/hospital?skip=2&limit=1
+
+DELETE {{BASEURL}}/hospital/name/ABC 병원
