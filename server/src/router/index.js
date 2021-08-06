@@ -1,14 +1,10 @@
-import KoaRouter from "koa-router";
-import TicketRouter from "./ticket";
-import HospitalRouter from "./hospital";
-import PrescriptionRouter from "./prescription";
+import KoaRouter from "koa-router"
+import PrescriptionRouter from "./prescription"
 
 const router = new KoaRouter({
   prefix: "/api",
-});
+})  // url 앞에 api 추가
 
-router.use("/ticket", TicketRouter.routes());
-router.use("/hospital", HospitalRouter.routes());
-router.use("/prescription", PrescriptionRouter.routes());
+router.use("/prescription", PrescriptionRouter.routes())
 
-export default router;
+export default router

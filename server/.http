@@ -1,3 +1,5 @@
+// 임의로 작성한 data
+
 @BASEURL=http://localhost:3000/api
 
 
@@ -10,14 +12,14 @@ POST {{BASEURL}}/prescription
 Content-Type: application/json
 
 {
-    "patientName" : "안현서",
+    "patientName" : "환자",
     "medicine" : "감기약 동그란거 네 알"
 }
 
 //특정 id의 처방전 삭제
 DELETE {{BASEURL}}/prescription/5f3f767d2f440215286a0d44
 
-DELETE {{BASEURL}}/prescription/patientName/안현서
+DELETE {{BASEURL}}/prescription/patientName/환자
 
 
 

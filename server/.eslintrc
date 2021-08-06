@@ -1,6 +1,6 @@
 {
     "parser": "babel-eslint",
-    "extends": "airbnb",
+    "extends": "prettier",
     "plugins": ["react", "jsx-a11y", "import", "json"],
     "parserOptions": {
         "ecmaVersion": 2016,
