@@ -1,2 +1,10 @@
 # Koa
-koa 기본 문법
+
+- server
+  - src
+    - index.js
+    - router
+      - index.js
+      - prescription
+        - index.js
+        - prescription.ctrl.js
